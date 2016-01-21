@@ -1,7 +1,6 @@
-package OrderProcessingSystem;
 
 /**
-  Briley Marchetti
+    Briley Marchetti
 **/
 
 public abstract class Transaction{
@@ -14,6 +13,10 @@ public abstract class Transaction{
     this.i1 = i1;
     this.c1 = c1;
     this.transactionNumber = transactionNumber;
+  }
+
+  public void setTransactionNumber(int newTransactionNumber){
+      this.transactionNumber = newTransactionNumber;
   }
 
   // Make sure the customer has valid payment method...doesn't really matter at this stage

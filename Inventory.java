@@ -1,5 +1,3 @@
-package OrderProcessingSystem;
-
 import java.util.ArrayList;
 
 /**
@@ -11,7 +9,7 @@ public class Inventory{
 
     protected ArrayList<InventoryItem> itemList;
 
-    public Inventory(ArrayList<InventoryItem> itemList){
-        this.itemList = new ArrayList<InventoryItem>();
-    }
+    // public Inventory(ArrayList<InventoryItem> itemList){
+    //     this.itemList = new ArrayList<InventoryItem>();
+    // }
 }

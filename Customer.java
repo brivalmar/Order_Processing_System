@@ -1,9 +1,7 @@
-package OrderProcessingSystem;
-
 import java.util.ArrayList;
 
 /**
-  Briley Marchetti
+    Briley Marchetti
 **/
 
 public class Customer{
@@ -41,6 +39,21 @@ public class Customer{
   public String getPaymentMethod(){
       return paymentMethod;
   }
+
+  // Setters
+  public void setFirstName(String newFirstName){
+      this.firstName = newFirstName;
+  }
+  public void setLastName(String newLastName){
+      this.lastName = newLastName;
+  }
+  public void setBillingAddress(String newBillingAddress){
+      this.billingAddress = newBillingAddress;
+  }
+  public void setShippingAddress(String newShippingAddress){
+      this.shippingAddress = newShippingAddress;
+  }
+
   // public ArrayList getItemCart(){
   //     return itemCart;
   // }

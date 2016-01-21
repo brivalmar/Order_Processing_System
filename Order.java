@@ -1,4 +1,3 @@
-package OrderProcessingSystem;
 
 /**
     Briley Marchetti
@@ -25,7 +24,7 @@ public class Order extends Transaction{
 
     // Check quantity to make sure purchase can go through
     public boolean checkInventoryItemQuantity(InventoryItem i1){
-        if(i1.getItemQuantity() > 0){
+        if(i1.getItemQuantity() >= this.quantityOfOrder){
             return true;
         }else{
             System.out.println("Sorry, we are currently out of " + i1.getItemName());

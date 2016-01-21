@@ -1,7 +1,6 @@
-package OrderProcessingSystem;
 
 /**
-  Briley Marchetti
+    Briley Marchetti
 **/
 
 public class InventoryItem{
@@ -12,8 +11,6 @@ public class InventoryItem{
   private String productDescription;
   private double itemPrice;
 
-
-//InventoryItem i2 = new InventoryItem(1, )
   public InventoryItem(int itemNumber, String itemName, int itemQuantity, String productDescription, double itemPrice){
     this.itemNumber = itemNumber;
     this.itemName = itemName;
@@ -21,7 +18,6 @@ public class InventoryItem{
     this.productDescription = productDescription;
     this.itemPrice = itemPrice;
   }
-
 
   // Getters
   public int getItemNumber(){
@@ -41,23 +37,20 @@ public class InventoryItem{
   }
 
   // Maybe add a setters for all of these...will do later
-  public int changeItemNumber(int newItemNumber){
-      return newItemNumber;
+  public void setItemNumber(int newItemNumber){
+      this.itemNumber = newItemNumber;
   }
-  public String changeName(String newItemName){
-      return newItemName;
+  public void setName(String newItemName){
+      this.itemName = newItemName;
   }
-
-
-  //Mutators
-  public void incrementQuantity(InventoryItem i1){
-      int quantity = i1.getItemQuantity();
-      quantity++;
+  public void setItemQuantity(int newItemQuantity){   // i1.setQuantity(i1.getItemQuantity + quantityAdjustmentValue);
+      this.itemQuantity = newItemQuantity;
   }
-  public void decrementQuantity(InventoryItem i1){
-      int quantity = i1.getItemQuantity();
-      quantity--;
+  public void setProductDescription(String newProductDescription){
+      this.productDescription = newProductDescription;
   }
-
+  public void setItemPrice(int newItemPrice){
+      this.itemPrice = newItemPrice;
+  }
 
 }

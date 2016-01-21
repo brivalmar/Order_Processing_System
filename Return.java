@@ -1,4 +1,3 @@
-package OrderProcessingSystem;
 
 /**
     Briley Marchetti
@@ -24,9 +23,11 @@ public class Return extends Transaction{
         return transactionNumber;
     }
 
-    public int inventoryItemReturn(InventoryItem i1, int returnQuantity){
-        int existingItemQuantity = i1.getItemQuantity();
-        int newItemQuantity = existingItemQuantity + returnQuantity;
-        return newItemQuantity;
-    }
+    // Maybe redundant...need to rethink.
+
+    // public int inventoryItemReturn(InventoryItem i1){
+    //     int existingItemQuantity = i1.getItemQuantity();
+    //     int newItemQuantity = existingItemQuantity + this.returnQuantity;
+    //     return newItemQuantity;
+    // }
 }
