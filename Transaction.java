@@ -15,6 +15,12 @@ public abstract class Transaction{
     this.transactionNumber = transactionNumber;
   }
 
+  // Getter
+  public int getTransactionNumber(){
+      return this.transactionNumber;
+  }
+
+  // Setter
   public void setTransactionNumber(int newTransactionNumber){
       this.transactionNumber = newTransactionNumber;
   }

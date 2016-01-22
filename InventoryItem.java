@@ -9,31 +9,36 @@ public class InventoryItem{
   private String itemName;
   private int itemQuantity;
   private String productDescription;
+  private double unitCost;
   private double itemPrice;
 
-  public InventoryItem(int itemNumber, String itemName, int itemQuantity, String productDescription, double itemPrice){
+  public InventoryItem(int itemNumber, String itemName, int itemQuantity, String productDescription, double unitCost, double itemPrice){
     this.itemNumber = itemNumber;
     this.itemName = itemName;
     this.itemQuantity = itemQuantity;
     this.productDescription = productDescription;
+    this.unitCost = unitCost;
     this.itemPrice = itemPrice;
   }
 
   // Getters
   public int getItemNumber(){
-      return itemNumber;
+      return this.itemNumber;
   }
   public String getItemName(){
-      return itemName;
+      return this.itemName;
   }
   public int getItemQuantity(){
-      return itemQuantity;
+      return this.itemQuantity;
   }
   public String getProductDescription(){
-      return productDescription;
+      return this.productDescription;
+  }
+  public double getUnitCost(){
+      return this.unitCost;
   }
   public double getItemPrice(){
-      return itemPrice;
+      return this.itemPrice;
   }
 
   // Maybe add a setters for all of these...will do later
@@ -48,6 +53,9 @@ public class InventoryItem{
   }
   public void setProductDescription(String newProductDescription){
       this.productDescription = newProductDescription;
+  }
+  public void setUnitCost(double cost){
+      this.unitCost = cost;
   }
   public void setItemPrice(int newItemPrice){
       this.itemPrice = newItemPrice;
