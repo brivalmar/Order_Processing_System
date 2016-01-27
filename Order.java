@@ -6,6 +6,7 @@
 public class Order extends Transaction{
 
     protected int quantityOfOrder;
+    
     public Order(InventoryItem i1, Customer c1, int transactionNumber, int quantityOfOrder){
         super(i1, c1, transactionNumber);
         this.quantityOfOrder = quantityOfOrder;
@@ -13,13 +14,13 @@ public class Order extends Transaction{
 
     // Getters
     public InventoryItem getInventoryItem(){
-        return i1;
+        return this.i1;
     }
     public Customer getCustomer(){
-        return c1;
+        return this.c1;
     }
     public int getTransactionNumber(){
-        return transactionNumber;
+        return this.transactionNumber;
     }
 
     // Check quantity to make sure purchase can go through

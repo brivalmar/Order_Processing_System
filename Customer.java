@@ -4,6 +4,9 @@ import java.util.ArrayList;
     Briley Marchetti
 **/
 
+// Anything based around the 'shopping cart' will be left out until everything works functionally
+
+
 public class Customer{
 
   private String firstName;
@@ -11,8 +14,7 @@ public class Customer{
   private String billingAddress;
   private String shippingAddress;
   private String paymentMethod;
-  // Anything based around the 'shopping cart' will be left out until everything works functionally
-  //private ArrayList<InventoryItem> itemCart;
+  // private ArrayList<InventoryItem> itemCart;
 
   public Customer(String firstName, String lastName, String billingAddress, String shippingAddress, String paymentMethod){   //, ArrayList itemCart){
     this.firstName = firstName;
@@ -25,19 +27,19 @@ public class Customer{
 
   // Getters
   public String getFirstName(){
-      return firstName;
+      return this.firstName;
   }
   public String getLastName(){
-      return lastName;
+      return this.lastName;
   }
   public String getBillingAddress(){
-      return billingAddress;
+      return this.billingAddress;
   }
   public String getShippingAddress(){
-      return shippingAddress;
+      return this.shippingAddress;
   }
   public String getPaymentMethod(){
-      return paymentMethod;
+      return this.paymentMethod;
   }
 
   // Setters

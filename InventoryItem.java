@@ -41,7 +41,7 @@ public class InventoryItem{
       return this.itemPrice;
   }
 
-  // Maybe add a setters for all of these...will do later
+  // Setters for InventoryItem fields
   public void setItemNumber(int newItemNumber){
       this.itemNumber = newItemNumber;
   }

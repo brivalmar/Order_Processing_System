@@ -14,14 +14,24 @@ public class Return extends Transaction{
 
     // Getters
     public InventoryItem getInventoryItem(){
-        return i1;
+        return this.i1;
     }
     public Customer getCustomer(){
-        return c1;
+        return this.c1;
     }
     public int getTransactionNumber(){
-        return transactionNumber;
+        return this.transactionNumber;
     }
+
+    public boolean addToInventoryItemQuantity(InventoryItem i1){
+        if(i1.getItemQuantity() >= this.returnQuantity){
+            return true;
+        }else{
+            System.out.println("Sorry, we are currently out of " + i1.getItemName());
+            return false;
+        }
+    }
+
 
     // Maybe redundant...need to rethink.
 

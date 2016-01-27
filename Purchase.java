@@ -1,3 +1,4 @@
+// Basically totally unnecesary at this point
 
 /**
     Briley Marchetti
@@ -11,9 +12,7 @@ public class Purchase extends Order{
         super(i1, c1, transactionNumber, quantityOfOrder);
     }
 
-
     // Maybe redundant...need to rethink.
-
 
     // public int inventoryItemSold(InventoryItem i1, int quantityOfOrder){
     //     int existingItemQuantity = i1.getItemQuantity();
