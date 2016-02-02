@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 /**
     Briley Marchetti
@@ -11,17 +10,17 @@ public class Customer{
 
   private String firstName;
   private String lastName;
-  private String billingAddress;
-  private String shippingAddress;
-  private String paymentMethod;
+  // private String billingAddress;
+  // private String shippingAddress;
+  // private String paymentMethod;
   // private ArrayList<InventoryItem> itemCart;
 
-  public Customer(String firstName, String lastName, String billingAddress, String shippingAddress, String paymentMethod){   //, ArrayList itemCart){
+  public Customer(String firstName, String lastName){ //, String billingAddress, String shippingAddress, String paymentMethod){   //, ArrayList itemCart){
     this.firstName = firstName;
     this.lastName = lastName;
-    this.billingAddress = billingAddress;
-    this.shippingAddress = shippingAddress;
-    this.paymentMethod = paymentMethod;
+    // this.billingAddress = billingAddress;
+    // this.shippingAddress = shippingAddress;
+    // this.paymentMethod = paymentMethod;
     //this.itemCart = new ArrayList<InventoryItem>();
   }
 
@@ -32,15 +31,15 @@ public class Customer{
   public String getLastName(){
       return this.lastName;
   }
-  public String getBillingAddress(){
-      return this.billingAddress;
-  }
-  public String getShippingAddress(){
-      return this.shippingAddress;
-  }
-  public String getPaymentMethod(){
-      return this.paymentMethod;
-  }
+  // public String getBillingAddress(){
+  //     return this.billingAddress;
+  // }
+  // public String getShippingAddress(){
+  //     return this.shippingAddress;
+  // }
+  // public String getPaymentMethod(){
+  //     return this.paymentMethod;
+  // }
 
   // Setters
   public void setFirstName(String newFirstName){
@@ -49,12 +48,12 @@ public class Customer{
   public void setLastName(String newLastName){
       this.lastName = newLastName;
   }
-  public void setBillingAddress(String newBillingAddress){
-      this.billingAddress = newBillingAddress;
-  }
-  public void setShippingAddress(String newShippingAddress){
-      this.shippingAddress = newShippingAddress;
-  }
+  // public void setBillingAddress(String newBillingAddress){
+  //     this.billingAddress = newBillingAddress;
+  // }
+  // public void setShippingAddress(String newShippingAddress){
+  //     this.shippingAddress = newShippingAddress;
+  // }
 
   // public ArrayList getItemCart(){
   //     return itemCart;

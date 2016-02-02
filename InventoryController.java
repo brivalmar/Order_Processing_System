@@ -9,18 +9,21 @@ public class InventoryController{
 
     public static void main(String[] args){
 
-        // Some test objects
-        InventoryItem first = new InventoryItem(1, "Shirt", 5, "Large", 1.99, 4.99);
-        Customer c1 = new Customer("John", "Smith", "1 Penn Lane", "1 Penn Lane", "DEBIT");
-        Transaction t1 = new Order(first, c1, 001, 2);
-
+        // Call methods to read text files of items and customers
         ArrayList<InventoryItem> itemList = readItemList();
-        //System.out.println("Here: " + itemList.get(0));
+        ArrayList<Customer> customerList = readCustomerList();
+
+        // Tests an order
+        Order t1 = new Order(itemList.get(0), customerList.get(0), 001, 2);
+        t1.checkAndSubtractInventoryItemQuantity(t1.getInventoryItem());
+
+        // Writes out itemList with new quanitties if adjusted
         writeOutInventoryItems(itemList);
     }
 
 
-    // So far...read in from 'inventoryItem.txt' to establish ArrayList of items.
+
+    // Read in from 'inventoryItem.txt' to establish ArrayList of items.
     public static ArrayList<InventoryItem> readItemList(){
         ArrayList<InventoryItem> itemList = new ArrayList<InventoryItem>();
         try{
@@ -57,21 +60,18 @@ public class InventoryController{
             readIn.close();
 
         } catch(FileNotFoundException f1){
-            System.out.println("File not found.");
+            System.out.println("InventoryItem.txt was not found.");
         }
 
-        //TEST FUNCTIONALITY OF ADDING INVENTORY ITEMS
-        System.out.println("Print names: ");
-        for(int i = 0; i < itemList.size(); i++){
-            System.out.println(itemList.get(i).getItemName());
-        }
         return itemList;
     }
 
 
     // Write Inventory ArrayList to a text file
     public static void writeOutInventoryItems(ArrayList<InventoryItem> itemList){
-        try ( BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("inventoryWriteOut.txt")))){
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("inventoryItem.txt")))){
+
+            System.out.println("Writing out itemList to inventoryItem.txt.");
 
             for(int i = 0; i < itemList.size(); i++){
                 bufferedWriter.write(Integer.toString(itemList.get(i).getItemNumber()));
@@ -93,11 +93,39 @@ public class InventoryController{
                 bufferedWriter.newLine();
             }
 
-			System.out.println("Done writing!");
+			System.out.println("Done writing to inventoryItem.txt!");
 
 		} catch (IOException e){
 			e.printStackTrace();
 		}
     }
 
+
+    //Customer input from text file
+    public static ArrayList<Customer> readCustomerList(){
+        ArrayList<Customer> customerList = new ArrayList<Customer>();
+        try{
+            File file = new File("customer.txt");
+            Scanner readIn = new Scanner(file);
+
+            // Parses line by line of text file to create a Customer and adds it to the Customer ArrayList
+            // Customers only have two fields firstName and lastName for now
+            while(readIn.hasNext()){
+
+                String customerFirstName = readIn.next();
+                // System.out.println(customerFirstName);
+
+                String customerLastName = readIn.next();
+                // System.out.println(customerLastName);
+
+                customerList.add(new Customer(customerFirstName, customerLastName));
+            }
+
+            readIn.close();
+
+        } catch(FileNotFoundException f1){
+            System.out.println("Customer.txt was not found.");
+        }
+        return customerList;
+    }
 }

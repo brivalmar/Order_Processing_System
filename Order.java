@@ -6,7 +6,7 @@
 public class Order extends Transaction{
 
     protected int quantityOfOrder;
-    
+
     public Order(InventoryItem i1, Customer c1, int transactionNumber, int quantityOfOrder){
         super(i1, c1, transactionNumber);
         this.quantityOfOrder = quantityOfOrder;
@@ -24,12 +24,14 @@ public class Order extends Transaction{
     }
 
     // Check quantity to make sure purchase can go through
-    public boolean checkInventoryItemQuantity(InventoryItem i1){
+    public void checkAndSubtractInventoryItemQuantity(InventoryItem i1){
         if(i1.getItemQuantity() >= this.quantityOfOrder){
-            return true;
+            i1.setItemQuantity(i1.getItemQuantity() - this.quantityOfOrder);
+            System.out.println("Transaction: ");
+            System.out.println("    Inventory Item: " + this.i1.getItemName() + "\n    Quantity: " + this.quantityOfOrder);
+            System.out.println("    Customer: " + this.c1.getFirstName() + " " + this.c1.getLastName() + "\n");
         }else{
-            System.out.println("Sorry, we are currently out of " + i1.getItemName());
-            return false;
+            System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");
         }
     }
 }
