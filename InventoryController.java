@@ -13,9 +13,17 @@ public class InventoryController{
         ArrayList<InventoryItem> itemList = readItemList();
         ArrayList<Customer> customerList = readCustomerList();
 
-        // Tests an order
-        Order t1 = new Order(itemList.get(0), customerList.get(0), 001, 2);
-        t1.checkAndSubtractInventoryItemQuantity(t1.getInventoryItem());
+        // Tests an array of orders...
+        int totalTests = 1000;
+        for(int i = 0; i < totalTests; i++){
+            int randNum1 = (int) Math.floor(Math.random() * itemList.size());
+            int randNum2 = (int) Math.floor(Math.random() * customerList.size());
+            int randNum3 = (int) Math.floor((Math.random() * 6) + 1);
+
+            Order[] orders = new Order[totalTests];
+            orders[i] = new Order(itemList.get(randNum1), customerList.get(randNum2), (i + 1), randNum3);
+            orders[i].checkAndSubtractInventoryItemQuantity(orders[i].getInventoryItem());
+        }
 
         // Writes out itemList with new quanitties if adjusted
         writeOutInventoryItems(itemList);
@@ -74,23 +82,17 @@ public class InventoryController{
             System.out.println("Writing out itemList to inventoryItem.txt.");
 
             for(int i = 0; i < itemList.size(); i++){
-                bufferedWriter.write(Integer.toString(itemList.get(i).getItemNumber()));
-                bufferedWriter.newLine();
+                bufferedWriter.write(Integer.toString(itemList.get(i).getItemNumber()) + "\n");
 
-                bufferedWriter.write(itemList.get(i).getItemName());
-                bufferedWriter.newLine();
+                bufferedWriter.write(itemList.get(i).getItemName() + "\n");
 
-                bufferedWriter.write(Integer.toString(itemList.get(i).getItemQuantity()));
-                bufferedWriter.newLine();
+                bufferedWriter.write(Integer.toString(itemList.get(i).getItemQuantity()) + "\n");
 
-                bufferedWriter.write(itemList.get(i).getProductDescription());
-                bufferedWriter.newLine();
+                bufferedWriter.write(itemList.get(i).getProductDescription() + "\n");
 
-                bufferedWriter.write(Double.toString(itemList.get(i).getUnitCost()));
-                bufferedWriter.newLine();
+                bufferedWriter.write(Double.toString(itemList.get(i).getUnitCost()) + "\n");
 
-                bufferedWriter.write(Double.toString(itemList.get(i).getItemPrice()));
-                bufferedWriter.newLine();
+                bufferedWriter.write(Double.toString(itemList.get(i).getItemPrice()) + "\n");
             }
 
 			System.out.println("Done writing to inventoryItem.txt!");

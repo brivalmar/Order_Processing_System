@@ -1,0 +1,4 @@
+Transaction: 100
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 5
+    Customer: Michael Stadler
