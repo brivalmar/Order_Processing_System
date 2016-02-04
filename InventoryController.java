@@ -1,35 +1,12 @@
 import java.util.ArrayList;
 import java.io.*;
 import java.util.Scanner;
+
 /**
     Briley Marchetti
 **/
 
 public class InventoryController{
-
-    public static void main(String[] args){
-
-        // Call methods to read text files of items and customers
-        ArrayList<InventoryItem> itemList = readItemList();
-        ArrayList<Customer> customerList = readCustomerList();
-
-        // Tests an array of orders...
-        int totalTests = 1000;
-        for(int i = 0; i < totalTests; i++){
-            int randNum1 = (int) Math.floor(Math.random() * itemList.size());
-            int randNum2 = (int) Math.floor(Math.random() * customerList.size());
-            int randNum3 = (int) Math.floor((Math.random() * 6) + 1);
-
-            Order[] orders = new Order[totalTests];
-            orders[i] = new Order(itemList.get(randNum1), customerList.get(randNum2), (i + 1), randNum3);
-            orders[i].checkAndSubtractInventoryItemQuantity(orders[i].getInventoryItem());
-        }
-
-        // Writes out itemList with new quanitties if adjusted
-        writeOutInventoryItems(itemList);
-    }
-
-
 
     // Read in from 'inventoryItem.txt' to establish ArrayList of items.
     public static ArrayList<InventoryItem> readItemList(){
@@ -42,25 +19,16 @@ public class InventoryController{
             while(readIn.hasNext()){
 
                 int itemNumber = readIn.nextInt();
-                //System.out.println(itemNumber);
 
                 String itemName = readIn.next();
-                //System.out.println(itemName);
 
                 int itemQuantity = readIn.nextInt();
-                //System.out.println(itemQuantity);
 
                 String productDescription = readIn.next();
-                //System.out.println(productDescription);
 
                 double unitCost = readIn.nextDouble();
-                //System.out.println(unitCost);
 
                 double price = readIn.nextDouble();
-                //System.out.println(price);
-
-                //Space for testing purposes. Will not be logging all of this.
-                //System.out.println();
 
                 itemList.add(new InventoryItem(itemNumber, itemName, itemQuantity, productDescription, unitCost, price));
             }
@@ -100,34 +68,5 @@ public class InventoryController{
 		} catch (IOException e){
 			e.printStackTrace();
 		}
-    }
-
-
-    //Customer input from text file
-    public static ArrayList<Customer> readCustomerList(){
-        ArrayList<Customer> customerList = new ArrayList<Customer>();
-        try{
-            File file = new File("customer.txt");
-            Scanner readIn = new Scanner(file);
-
-            // Parses line by line of text file to create a Customer and adds it to the Customer ArrayList
-            // Customers only have two fields firstName and lastName for now
-            while(readIn.hasNext()){
-
-                String customerFirstName = readIn.next();
-                // System.out.println(customerFirstName);
-
-                String customerLastName = readIn.next();
-                // System.out.println(customerLastName);
-
-                customerList.add(new Customer(customerFirstName, customerLastName));
-            }
-
-            readIn.close();
-
-        } catch(FileNotFoundException f1){
-            System.out.println("Customer.txt was not found.");
-        }
-        return customerList;
     }
 }
