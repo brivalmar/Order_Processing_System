@@ -1,400 +1,505 @@
 Transaction: 1
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 3
-    Customer: Briley Marchetti
-Transaction: 2
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
+    Type: ORDER 
+    Inventory Item: Socks, No-show
     Quantity: 5
-    Customer: Alex Moran
+    Customer: John Smith
+Transaction: 2
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 2
+    Customer: Jake Thompson
 Transaction: 3
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 4
-    Customer: Alex Moran
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 2
+    Customer: Thomas Adams
 Transaction: 4
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 4
-    Customer: Michael Stadler
-Transaction: 5
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 3
     Customer: Jake Thompson
+Transaction: 5
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 1
+    Customer: Briley Marchetti
 Transaction: 6
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 4
-    Customer: Jake Thompson
-Transaction: 7
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+    Type: ORDER 
+    Inventory Item: Socks, No-show
     Quantity: 6
     Customer: Alex Moran
+Transaction: 7
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 1
+    Customer: Briley Marchetti
 Transaction: 8
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 2
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 4
     Customer: John Smith
 Transaction: 9
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 3
-    Customer: John Smith
-Transaction: 10
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
     Quantity: 2
-    Customer: Kevin Costle
-Transaction: 11
-    Type: ORDER    Inventory Item: Socks, Ankle
+    Customer: Tony Meanor
+Transaction: 10
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
     Quantity: 3
-    Customer: Lebron James
+    Customer: Alex Moran
+Transaction: 11
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 4
+    Customer: Thomas Adams
 Transaction: 12
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 5
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 6
     Customer: Jake Thompson
 Transaction: 13
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 2
-    Customer: Briley Marchetti
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Mitchell Daber
 Transaction: 14
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 3
-    Customer: Kevin Costle
-Transaction: 15
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 5
-    Customer: Jake Thompson
-Transaction: 16
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 2
-    Customer: Kevin Costle
-Transaction: 17
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 2
-    Customer: Mitchell Daber
-Transaction: 18
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 1
-    Customer: Thomas Adams
-Transaction: 19
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Michael Stadler
-Transaction: 20
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 6
-    Customer: Kevin Costle
-Transaction: 21
-    Type: ORDER    Inventory Item: Socks, No-show
+    Type: ORDER 
+    Inventory Item: Shirt, Large
     Quantity: 4
-    Customer: Thomas Adams
-Transaction: 22
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 1
-    Customer: Briley Marchetti
-Transaction: 23
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 5
-    Customer: Mitchell Daber
-Transaction: 24
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 1
-    Customer: Lebron James
-Transaction: 25
-    Type: ORDER    Inventory Item: Pants, Long
+    Customer: Alex Moran
+Transaction: 15
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 4
+    Customer: Kevin Costle
+Transaction: 16
+    Type: ORDER 
+    Inventory Item: Pants, Long
     Quantity: 3
+    Customer: Tony Meanor
+Transaction: 17
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 1
+    Customer: Jake Thompson
+Transaction: 18
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 6
+    Customer: Briley Marchetti
+Transaction: 19
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 3
+    Customer: Mitchell Daber
+Transaction: 20
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 6
+    Customer: Jake Thompson
+Transaction: 21
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: Michael Stadler
+Transaction: 22
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 4
+    Customer: Lebron James
+Transaction: 23
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Alex Moran
+Transaction: 24
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 4
+    Customer: Kevin Costle
+Transaction: 25
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 1
     Customer: Briley Marchetti
 Transaction: 26
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 6
-    Customer: Mitchell Daber
-Transaction: 27
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 4
-    Customer: Alex Moran
-Transaction: 28
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 2
-    Customer: Kevin Costle
-Transaction: 29
-    Type: ORDER    Inventory Item: Shirt, Large
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 1
-    Customer: Kevin Costle
-Transaction: 30
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
+    Customer: Briley Marchetti
+Transaction: 27
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 4
+    Customer: Michael Stadler
+Transaction: 28
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 2
     Customer: Mitchell Daber
-Transaction: 31
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 6
-    Customer: Michael Stadler
-Transaction: 32
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 5
-    Customer: Lebron James
-Transaction: 33
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Lebron James
-Transaction: 34
-    Type: ORDER    Inventory Item: Socks, No-show
+Transaction: 29
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 1
     Customer: Jake Thompson
-Transaction: 35
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 3
-    Customer: Mitchell Daber
-Transaction: 36
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
+Transaction: 30
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 4
+    Customer: Thomas Adams
+Transaction: 31
+    Type: ORDER 
+    Inventory Item: Pants, Long
     Quantity: 6
-    Customer: Michael Stadler
-Transaction: 37
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Kevin Costle
-Transaction: 38
-    Type: ORDER    Inventory Item: Shirt, Large
+    Customer: Briley Marchetti
+Transaction: 32
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 4
+    Customer: Briley Marchetti
+Transaction: 33
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 4
+    Customer: John Smith
+Transaction: 34
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 3
+    Customer: Briley Marchetti
+Transaction: 35
+    Type: ORDER 
+    Inventory Item: Socks, No-show
     Quantity: 1
+    Customer: Lebron James
+Transaction: 36
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 2
+    Customer: Alex Moran
+Transaction: 37
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 2
+    Customer: Briley Marchetti
+Transaction: 38
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
     Customer: Kevin Costle
 Transaction: 39
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 2
-    Customer: John Smith
-Transaction: 40
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 4
-    Customer: Mitchell Daber
-Transaction: 41
-    Type: ORDER    Inventory Item: Socks, No-show
+    Type: ORDER 
+    Inventory Item: Socks, No-show
     Quantity: 2
     Customer: Jake Thompson
-Transaction: 42
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 1
-    Customer: Thomas Adams
-Transaction: 43
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 1
-    Customer: Alex Moran
-Transaction: 44
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+Transaction: 40
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 2
+    Customer: Lebron James
+Transaction: 41
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 3
+    Customer: Thomas Adams
+Transaction: 42
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: Lebron James
+Transaction: 43
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 1
+    Customer: John Smith
+Transaction: 44
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 5
     Customer: Thomas Adams
 Transaction: 45
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 1
-    Customer: John Smith
-Transaction: 46
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 6
-    Customer: Mitchell Daber
-Transaction: 47
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 6
-    Customer: Tony Meanor
-Transaction: 48
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 2
-    Customer: Lebron James
-Transaction: 49
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 1
-    Customer: Michael Stadler
-Transaction: 50
-    Type: ORDER    Inventory Item: Socks, No-show
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
     Quantity: 4
-    Customer: Lebron James
-Transaction: 51
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 5
     Customer: Michael Stadler
-Transaction: 52
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 2
-    Customer: Jake Thompson
-Transaction: 53
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 1
-    Customer: Tony Meanor
-Transaction: 54
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 2
-    Customer: Kevin Costle
-Transaction: 55
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 2
-    Customer: Kevin Costle
-Transaction: 56
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 1
-    Customer: Michael Stadler
-Transaction: 57
-    Type: ORDER    Inventory Item: Socks, Ankle
+Transaction: 46
+    Type: ORDER 
+    Inventory Item: Shirt, Large
     Quantity: 2
     Customer: Thomas Adams
-Transaction: 58
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+Transaction: 47
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 5
+    Customer: John Smith
+Transaction: 48
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: Tony Meanor
+Transaction: 49
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 2
+    Customer: Kevin Costle
+Transaction: 50
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 2
+    Customer: Thomas Adams
+Transaction: 51
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: John Smith
+Transaction: 52
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Mitchell Daber
+Transaction: 53
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 2
+    Customer: Kevin Costle
+Transaction: 54
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Mitchell Daber
+Transaction: 55
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 1
+    Customer: Thomas Adams
+Transaction: 56
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 5
+    Customer: John Smith
+Transaction: 57
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 2
+    Customer: Briley Marchetti
+Transaction: 58
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 6
     Customer: Briley Marchetti
 Transaction: 59
-    Type: ORDER    Inventory Item: Socks, Ankle
+    Type: ORDER 
+    Inventory Item: Pants, Long
     Quantity: 1
-    Customer: Jake Thompson
+    Customer: Mitchell Daber
 Transaction: 60
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 6
-    Customer: Mitchell Daber
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 3
+    Customer: Tony Meanor
 Transaction: 61
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 3
-    Customer: Alex Moran
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 2
+    Customer: Lebron James
 Transaction: 62
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 2
-    Customer: Alex Moran
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 1
+    Customer: John Smith
 Transaction: 63
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 1
-    Customer: Mitchell Daber
-Transaction: 64
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 6
-    Customer: Mitchell Daber
-Transaction: 65
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 1
-    Customer: John Smith
-Transaction: 66
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 4
-    Customer: Tony Meanor
-Transaction: 67
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 6
-    Customer: Briley Marchetti
-Transaction: 68
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 2
-    Customer: Mitchell Daber
-Transaction: 69
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Tony Meanor
-Transaction: 70
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 1
-    Customer: Kevin Costle
-Transaction: 71
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 3
-    Customer: Mitchell Daber
-Transaction: 72
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 1
-    Customer: Michael Stadler
-Transaction: 73
-    Type: ORDER    Inventory Item: Shirt, Large
-    Quantity: 1
-    Customer: Mitchell Daber
-Transaction: 74
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 3
-    Customer: John Smith
-Transaction: 75
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 6
-    Customer: Kevin Costle
-Transaction: 76
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 4
-    Customer: Jake Thompson
-Transaction: 77
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 1
-    Customer: John Smith
-Transaction: 78
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 2
-    Customer: Tony Meanor
-Transaction: 79
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 5
-    Customer: Tony Meanor
-Transaction: 80
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Lebron James
-Transaction: 81
-    Type: ORDER    Inventory Item: Socks, No-show
-    Quantity: 3
-    Customer: Lebron James
-Transaction: 82
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 6
-    Customer: Alex Moran
-Transaction: 83
-    Type: ORDER    Inventory Item: Pants, Long
-    Quantity: 2
-    Customer: Jake Thompson
-Transaction: 84
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 1
-    Customer: Mitchell Daber
-Transaction: 85
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 6
-    Customer: Tony Meanor
-Transaction: 86
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 2
-    Customer: Michael Stadler
-Transaction: 87
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 4
-    Customer: Tony Meanor
-Transaction: 88
-    Type: ORDER    Inventory Item: Socks, Ankle
-    Quantity: 3
-    Customer: Michael Stadler
-Transaction: 89
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 6
-    Customer: Briley Marchetti
-Transaction: 90
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 6
     Customer: Thomas Adams
-Transaction: 91
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 6
-    Customer: Briley Marchetti
-Transaction: 92
-    Type: ORDER    Inventory Item: Socks, Mid-calves
-    Quantity: 5
-    Customer: Jake Thompson
-Transaction: 93
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
-    Quantity: 6
-    Customer: Kevin Costle
-Transaction: 94
-    Type: ORDER    Inventory Item: Socks, No-show
+Transaction: 64
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 1
-    Customer: Michael Stadler
-Transaction: 95
-    Type: ORDER    Inventory Item: Shirt, Large
+    Customer: Jake Thompson
+Transaction: 65
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 6
+    Customer: John Smith
+Transaction: 66
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
     Quantity: 2
-    Customer: Briley Marchetti
-Transaction: 96
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+    Customer: Thomas Adams
+Transaction: 67
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 6
+    Customer: Mitchell Daber
+Transaction: 68
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Thomas Adams
+Transaction: 69
+    Type: ORDER 
+    Inventory Item: Pants, Long
     Quantity: 4
-    Customer: Lebron James
-Transaction: 97
-    Type: ORDER    Inventory Item: Socks, Mid-calves
+    Customer: John Smith
+Transaction: 70
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 1
+    Customer: Mitchell Daber
+Transaction: 71
+    Type: ORDER 
+    Inventory Item: Pants, Long
     Quantity: 1
     Customer: Alex Moran
-Transaction: 98
-    Type: ORDER    Inventory Item: Capris, Three-Quarter
+Transaction: 72
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 5
+    Customer: Tony Meanor
+Transaction: 73
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 4
+    Customer: Jake Thompson
+Transaction: 74
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 3
+    Customer: Mitchell Daber
+Transaction: 75
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: Alex Moran
+Transaction: 76
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 5
+    Customer: Kevin Costle
+Transaction: 77
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 2
+    Customer: Tony Meanor
+Transaction: 78
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 5
+    Customer: Michael Stadler
+Transaction: 79
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 3
+    Customer: Tony Meanor
+Transaction: 80
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 3
+    Customer: Tony Meanor
+Transaction: 81
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 1
+    Customer: Lebron James
+Transaction: 82
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 3
     Customer: Michael Stadler
-Transaction: 99
-    Type: ORDER    Inventory Item: Socks, No-show
+Transaction: 83
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 4
+    Customer: Briley Marchetti
+Transaction: 84
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 6
+    Customer: Michael Stadler
+Transaction: 85
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: Lebron James
+Transaction: 86
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 2
+    Customer: Briley Marchetti
+Transaction: 87
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 5
+    Customer: Tony Meanor
+Transaction: 88
+    Type: ORDER 
+    Inventory Item: Socks, Mid-calves
+    Quantity: 4
+    Customer: John Smith
+Transaction: 89
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 3
-    Customer: Kevin Costle
-Transaction: 100
-    Type: ORDER    Inventory Item: Socks, Ankle
+    Customer: Thomas Adams
+Transaction: 90
+    Type: ORDER 
+    Inventory Item: Pants, Long
+    Quantity: 5
+    Customer: John Smith
+Transaction: 91
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
     Quantity: 4
     Customer: Lebron James
+Transaction: 92
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 5
+    Customer: Lebron James
+Transaction: 93
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 4
+    Customer: Michael Stadler
+Transaction: 94
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 5
+    Customer: John Smith
+Transaction: 95
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 1
+    Customer: Tony Meanor
+Transaction: 96
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 6
+    Customer: Alex Moran
+Transaction: 97
+    Type: ORDER 
+    Inventory Item: Socks, Ankle
+    Quantity: 1
+    Customer: Kevin Costle
+Transaction: 98
+    Type: ORDER 
+    Inventory Item: Shirt, Large
+    Quantity: 3
+    Customer: Lebron James
+Transaction: 99
+    Type: ORDER 
+    Inventory Item: Capris, Three-Quarter
+    Quantity: 2
+    Customer: Thomas Adams
+Transaction: 100
+    Type: ORDER 
+    Inventory Item: Socks, No-show
+    Quantity: 5
+    Customer: Mitchell Daber
+Transaction: 1
+    Type: RETURN 
+    Inventory Item: Pants, Long
+    Quantity Returned: 1
+    Customer: John Smith

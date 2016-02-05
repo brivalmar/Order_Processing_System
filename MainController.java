@@ -23,6 +23,10 @@ public class MainController{
             orders[i].checkAndSubtractInventoryItemQuantity(orders[i].getInventoryItem());
         }
 
+        // Testing Returns and incrementing itemQuantity
+        // Return return1 = new Return(itemList.get(1), customerList.get(1), 1, 1);
+        // return1.addToInventoryItemQuantity(return1.getInventoryItem());
+
         // Writes out itemList with new quanitties if adjusted
         InventoryController.writeOutInventoryItems(itemList);
     }

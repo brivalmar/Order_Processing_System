@@ -32,7 +32,7 @@ public class Order extends Transaction{
             // Print transactions to a text file...
             try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("listOfTransactions.txt"), true))){
                 bufferedWriter.write("Transaction: " + this.getTransactionNumber() + "\n");
-                bufferedWriter.write("    Type: ORDER");
+                bufferedWriter.write("    Type: ORDER \n");
                 bufferedWriter.write("    Inventory Item: " + this.i1.getItemName() + ", " + this.i1.getProductDescription() + "\n    Quantity: " + this.quantityOfOrder + "\n");
                 bufferedWriter.write("    Customer: " + this.c1.getFirstName() + " " + this.c1.getLastName() + "\n");
             }catch (IOException e){

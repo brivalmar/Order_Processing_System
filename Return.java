@@ -1,3 +1,4 @@
+import java.io.*;
 
 /**
     Briley Marchetti
@@ -23,13 +24,24 @@ public class Return extends Transaction{
         return this.transactionNumber;
     }
 
-    public boolean addToInventoryItemQuantity(InventoryItem i1){
-        if(i1.getItemQuantity() >= this.returnQuantity){
-            return true;
-        }else{
-            System.out.println("Sorry, we are currently out of " + i1.getItemName());
-            return false;
+    public void addToInventoryItemQuantity(InventoryItem i1){
+        if(this.returnQuantity != 0){
+            i1.setItemQuantity(i1.getItemQuantity() + this.returnQuantity);
+
+            // Print transactions to a text file...
+            try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("listOfTransactions.txt"), true))){
+                bufferedWriter.write("Transaction: " + this.getTransactionNumber() + "\n");
+                bufferedWriter.write("    Type: RETURN \n");
+                bufferedWriter.write("    Inventory Item: " + this.i1.getItemName() + ", " + this.i1.getProductDescription() + "\n    Quantity Returned: " + this.returnQuantity + "\n");
+                bufferedWriter.write("    Customer: " + this.c1.getFirstName() + " " + this.c1.getLastName() + "\n");
+            }catch (IOException e){
+    			e.printStackTrace();
+    		}
+
+        } else{
+            System.out.println("No return made.");
         }
+
     }
 
 

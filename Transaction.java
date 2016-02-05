@@ -24,15 +24,5 @@ public abstract class Transaction{
   public void setTransactionNumber(int newTransactionNumber){
       this.transactionNumber = newTransactionNumber;
   }
-
-  // Make sure the customer has valid payment method...doesn't really matter at this stage
   
-  // public boolean checkPaymentMethod(Customer c1){
-  //     if(c1.getPaymentMethod().toLowerCase().equals("debit")){
-  //         return true;
-  //     }else{
-  //         System.out.println("Sorry. You do not have a valid form of payment.");
-  //         return false;
-  //     }
-  // }
 }
