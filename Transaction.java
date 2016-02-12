@@ -3,7 +3,7 @@
     Briley Marchetti
 **/
 
-public abstract class Transaction{
+public abstract class Transaction extends Thread{
 
   protected InventoryItem i1;
   protected Customer c1;
@@ -24,5 +24,5 @@ public abstract class Transaction{
   public void setTransactionNumber(int newTransactionNumber){
       this.transactionNumber = newTransactionNumber;
   }
-  
+
 }

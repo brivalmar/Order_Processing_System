@@ -25,9 +25,19 @@ public class Order extends Transaction{
     }
 
     // Check quantity to make sure purchase can go through
-    public void checkAndSubtractInventoryItemQuantity(InventoryItem i1){
+    public void run(){
+
+        synchronized(i1){
+            System.out.println("\nItem ordered.");
+            sellItem(i1, quantityOfOrder);
+        }
+
+    }
+
+    public void sellItem(InventoryItem i1, int quantityOfOrder){
         if(i1.getItemQuantity() >= this.quantityOfOrder){
             i1.setItemQuantity(i1.getItemQuantity() - this.quantityOfOrder);
+            System.out.println("Order: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber() + "\n   New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
             try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("listOfTransactions.txt"), true))){
@@ -36,8 +46,8 @@ public class Order extends Transaction{
                 bufferedWriter.write("    Inventory Item: " + this.i1.getItemName() + ", " + this.i1.getProductDescription() + "\n    Quantity: " + this.quantityOfOrder + "\n");
                 bufferedWriter.write("    Customer: " + this.c1.getFirstName() + " " + this.c1.getLastName() + "\n");
             }catch (IOException e){
-    			e.printStackTrace();
-    		}
+                e.printStackTrace();
+            }
 
         }else{
             System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");

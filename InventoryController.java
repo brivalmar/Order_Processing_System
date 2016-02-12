@@ -10,6 +10,7 @@ public class InventoryController{
 
     // Read in from 'inventoryItem.txt' to establish ArrayList of items.
     public static ArrayList<InventoryItem> readItemList(){
+        System.out.println("Reading itemList.");
         ArrayList<InventoryItem> itemList = new ArrayList<InventoryItem>();
         try{
             File file = new File("inventoryItem.txt");
@@ -38,7 +39,7 @@ public class InventoryController{
         } catch(FileNotFoundException f1){
             System.out.println("InventoryItem.txt was not found.");
         }
-
+        System.out.println("Done reading itemList.\n");
         return itemList;
     }
 
@@ -47,7 +48,7 @@ public class InventoryController{
     public static void writeOutInventoryItems(ArrayList<InventoryItem> itemList){
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("inventoryItem.txt")))){
 
-            System.out.println("Writing out itemList to inventoryItem.txt.");
+            System.out.println("\nWriting out itemList to inventoryItem.txt.");
 
             for(int i = 0; i < itemList.size(); i++){
                 bufferedWriter.write(Integer.toString(itemList.get(i).getItemNumber()) + "\n");

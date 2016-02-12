@@ -24,9 +24,20 @@ public class Return extends Transaction{
         return this.transactionNumber;
     }
 
-    public void addToInventoryItemQuantity(InventoryItem i1){
+    public void run(){
+
+        synchronized(i1){
+            System.out.println("\nReturning Item.");
+            returnItem(i1, returnQuantity);
+        }
+
+
+    }
+
+    public void returnItem(InventoryItem i1, int returnQuantity){
         if(this.returnQuantity != 0){
             i1.setItemQuantity(i1.getItemQuantity() + this.returnQuantity);
+            System.out.println("Return: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber()+ "\n  New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
             try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("listOfTransactions.txt"), true))){
@@ -35,21 +46,12 @@ public class Return extends Transaction{
                 bufferedWriter.write("    Inventory Item: " + this.i1.getItemName() + ", " + this.i1.getProductDescription() + "\n    Quantity Returned: " + this.returnQuantity + "\n");
                 bufferedWriter.write("    Customer: " + this.c1.getFirstName() + " " + this.c1.getLastName() + "\n");
             }catch (IOException e){
-    			e.printStackTrace();
-    		}
+                e.printStackTrace();
+            }
 
         } else{
             System.out.println("No return made.");
         }
-
     }
 
-
-    // Maybe redundant...need to rethink.
-
-    // public int inventoryItemReturn(InventoryItem i1){
-    //     int existingItemQuantity = i1.getItemQuantity();
-    //     int newItemQuantity = existingItemQuantity + this.returnQuantity;
-    //     return newItemQuantity;
-    // }
 }
