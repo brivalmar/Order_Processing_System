@@ -1,3 +1,4 @@
+import java.io.*;
 
 /**
     Briley Marchetti
@@ -24,5 +25,4 @@ public abstract class Transaction extends Thread{
   public void setTransactionNumber(int newTransactionNumber){
       this.transactionNumber = newTransactionNumber;
   }
-
 }

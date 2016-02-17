@@ -18,17 +18,11 @@ public class InventoryController{
 
             // Parses line by line of text file to create an InventoryItem and adds it to an ArrayList
             while(readIn.hasNext()){
-
                 int itemNumber = readIn.nextInt();
-
                 String itemName = readIn.next();
-
                 int itemQuantity = readIn.nextInt();
-
                 String productDescription = readIn.next();
-
                 double unitCost = readIn.nextDouble();
-
                 double price = readIn.nextDouble();
 
                 itemList.add(new InventoryItem(itemNumber, itemName, itemQuantity, productDescription, unitCost, price));
@@ -52,15 +46,10 @@ public class InventoryController{
 
             for(int i = 0; i < itemList.size(); i++){
                 bufferedWriter.write(Integer.toString(itemList.get(i).getItemNumber()) + "\n");
-
                 bufferedWriter.write(itemList.get(i).getItemName() + "\n");
-
                 bufferedWriter.write(Integer.toString(itemList.get(i).getItemQuantity()) + "\n");
-
                 bufferedWriter.write(itemList.get(i).getProductDescription() + "\n");
-
                 bufferedWriter.write(Double.toString(itemList.get(i).getUnitCost()) + "\n");
-
                 bufferedWriter.write(Double.toString(itemList.get(i).getItemPrice()) + "\n");
             }
 

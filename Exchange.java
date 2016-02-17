@@ -1,4 +1,3 @@
-import java.io.*;
 
 /**
     Briley Marchetti
@@ -29,16 +28,14 @@ public class Exchange extends Transaction{
 
     public void run(){
         synchronized(i1){
-
             Thread.yield();
-            synchronized(returnedItem){
+            //synchronized(returnedItem){
                 System.out.println("Exchange: Order then Return...");
-                Thread order = new Order(this.i1, this.c1, this.transactionNumber, 1);
-                order.start();
-                Thread return1 = new Return(this.returnedItem, this.c1, this.transactionNumber, 1);
-                return1.start();
-            }
-
+                Order order = new Order(this.i1, this.c1, this.transactionNumber, 1);
+                order.sellItem(i1, 1);
+                Return return1 = new Return(this.returnedItem, this.c1, this.transactionNumber, 1);
+                return1.returnItem(returnedItem, 1);
+            //}
         }
     }
 }

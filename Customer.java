@@ -54,16 +54,4 @@ public class Customer{
   // public void setShippingAddress(String newShippingAddress){
   //     this.shippingAddress = newShippingAddress;
   // }
-
-  // public ArrayList getItemCart(){
-  //     return itemCart;
-  // }
-  //
-  // // Mutators
-  // public ArrayList addInventoryItemToCart(Customer c1, InventoryItem i1){
-  //     ArrayList<InventoryItem> cart = c1.getItemCart();
-  //     cart.add(i1);
-  //     return cart;
-  // }
-
 }
