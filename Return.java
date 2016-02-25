@@ -29,22 +29,23 @@ public class Return extends Transaction{
     }
 
     public void run(){
-        synchronized(i1){
-            System.out.println("\nReturning Item to inventory.");
+        synchronized(this){
+            //System.out.println("\nReturning Item to inventory.");
             returnItem(i1, returnQuantity);
         }
     }
 
+    //Printing to the console slows this down way too much
     public void returnItem(InventoryItem i1, int returnQuantity){
         if(this.returnQuantity != 0){
             i1.setItemQuantity(i1.getItemQuantity() + returnQuantity);
-            System.out.println("Return: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber()+ "\n  New Quantity: " + (i1.getItemQuantity()));
+            //System.out.println("Return: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber()+ "\n  New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
             this.writeTransaction();
 
         } else{
-            System.out.println("No return made.");
+            //System.out.println("No return made.");
         }
     }
 

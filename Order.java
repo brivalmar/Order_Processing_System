@@ -29,22 +29,23 @@ public class Order extends Transaction{
 
     // Check quantity to make sure purchase can go through
     public void run(){
-        synchronized(i1){
-            System.out.println("\nItem ordered by customer.");
+        synchronized(this){
+            //System.out.println("\nItem ordered by customer.");
             sellItem(i1, quantityOfOrder);
         }
     }
 
+    //Printing to the console slows this down way too much
     public void sellItem(InventoryItem i1, int quantityOfOrder){
         if(i1.getItemQuantity() >= this.quantityOfOrder){
             i1.setItemQuantity(i1.getItemQuantity() - this.quantityOfOrder);
-            System.out.println("Order: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber() + "\n  New Quantity: " + (i1.getItemQuantity()));
+            //System.out.println("Order: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber() + "\n  New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
             this.writeTransaction();
 
         }else{
-            System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");
+            //System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");
         }
     }
 
