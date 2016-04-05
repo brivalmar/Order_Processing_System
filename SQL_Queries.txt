@@ -1,0 +1,48 @@
+CREATE TABLE CUSTOMER(
+    Customer_ID Int         NOT NULL    AUTO_INCREMENT,
+    FirstName   Char(25)    NOT NULL,
+    LastName    Char(25)    NOT NULL,
+    PRIMARY KEY(Customer_ID)
+);
+
+INSERT INTO CUSTOMER (FirstName, LastName) VALUES
+('John', 'Smith'), ('Briley', 'Marchetti'), ('Jake', 'Thompson'), ('Alex', 'Moran'), ('Burt', 'Wunderbear'), ('Kevin', 'Costle');
+
+
+
+CREATE TABLE INVENTORY_ITEM(
+    Inventory_ID        Int             NOT NULL    AUTO_INCREMENT,
+    ItemName            Char(25)        NOT NULL,
+    ItemQuantity        Int             NOT NULL,
+    ProductDescription  Char(35)        NOT NULL,
+    UnitCost            Numeric(4, 2)   NOT NULL,
+    ItemPrice           Numeric(4, 2)   NOT NULL,
+    PRIMARY KEY(Inventory_ID)
+);
+
+INSERT INTO INVENTORY_ITEM (ItemName, ItemQuantity, ProductDescription, UnitCost, ItemPrice) VALUES
+('Shirt', 16000, 'Large', '3.99', '11.99'), ('Pants', 11000, 'Long', '7.99', '19.99'), ('Capris', 8500, 'Three-quarter', '5.99', '17.99'),
+('Socks', 22500, 'Mid-calves', '1.99', '7.99'), ('Socks', 28500, 'No-show', '1.49', '7.49'), ('Socks', 32500, 'Ankle', '1.79', '7.79');
+
+
+
+CREATE TABLE TRANSACTIONS(
+    Transaction_ID      Int             NOT NULL    AUTO_INCREMENT,
+    TransactionType     Char(25)        NOT NULL,
+    Customer_ID         Int             NOT NULL,
+    Inventory_ID        Int             NOT NULL,
+
+    PRIMARY KEY(Transaction_ID),
+    INDEX (Customer_ID),
+    INDEX (Inventory_ID),
+
+    FOREIGN KEY(Customer_ID)
+        REFERENCES CUSTOMER(Customer_ID)
+            ON UPDATE CASCADE
+            ON DELETE NO ACTION,
+
+    FOREIGN KEY(Inventory_ID)
+        REFERENCES INVENTORY_ITEM(Inventory_ID)
+            ON UPDATE CASCADE
+            ON DELETE NO ACTION
+);

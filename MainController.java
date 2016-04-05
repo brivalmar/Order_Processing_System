@@ -10,7 +10,7 @@ public class MainController{
         ArrayList<InventoryItem> itemList = InventoryController.readItemList();
         ArrayList<Customer> customerList = CustomerController.readCustomerList();
 
-        Thread[] t = new Thread[1000000];
+        Thread[] t = new Thread[10000000];
 
         //Creates as many threads with random numbers for items, customers...
         for(int i = 0; i < t.length; i++){
@@ -29,6 +29,12 @@ public class MainController{
             }
 
             t[i].start();
+
+            // try{
+            //     Thread.sleep(1);
+            // }catch(InterruptedException e){
+            //     System.out.print("Exception");
+            // }
         }
 
         //Checks to see if any threads are still running...
