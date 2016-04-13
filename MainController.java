@@ -1,3 +1,4 @@
+import java.sql.*;
 import java.util.ArrayList;
 
 /**
@@ -5,20 +6,23 @@ import java.util.ArrayList;
 **/
 
 public class MainController{
-    public static void main(String[] args) throws InterruptedException{
 
-        ArrayList<InventoryItem> itemList = InventoryController.readItemList();
-        ArrayList<Customer> customerList = CustomerController.readCustomerList();
+    public static void main(String[] args) throws SQLException{
 
-        Thread[] t = new Thread[10000000];
+        //Reads in from database table
+        ArrayList<InventoryItem> itemList = DatabaseConnector.populateItemArrayList();
+        ArrayList<Customer> customerList = DatabaseConnector.populateCustomerArrayList();
 
-        //Creates as many threads with random numbers for items, customers...
+        Thread[] t = new Thread[1000];
+
+        // //Creates as many threads with random numbers for items, customers...
         for(int i = 0; i < t.length; i++){
             int itemRandom = (int)(Math.random() * itemList.size());
             int customerRandom = (int)(Math.random() * customerList.size());
             int transNum = i + 1;
-            int itemQuant = (int)(Math.random() * 6);
+            int itemQuant = (int)(Math.random() * 6) + 1;
             int secondItemRandom = (int)(Math.random() * itemList.size());
+
 
             if(i % 7 == 0){
                 t[i] = new Exchange(itemList.get(itemRandom), customerList.get(customerRandom), transNum, itemList.get(secondItemRandom));
@@ -29,12 +33,6 @@ public class MainController{
             }
 
             t[i].start();
-
-            // try{
-            //     Thread.sleep(1);
-            // }catch(InterruptedException e){
-            //     System.out.print("Exception");
-            // }
         }
 
         //Checks to see if any threads are still running...
@@ -45,9 +43,6 @@ public class MainController{
                 threadsAreAlive = t[j].isAlive() || threadsAreAlive;
             }
         } while(threadsAreAlive);
-
-        //Waits until all threads are complete to write back out to inventoryItem.txt
-        InventoryController.writeOutInventoryItems(itemList);
-
     }
+
 }

@@ -1,5 +1,5 @@
 import java.io.*;
-
+import java.sql.*;
 /**
     Briley Marchetti
 **/
@@ -29,8 +29,14 @@ public class Order extends Transaction{
 
     // Check quantity to make sure purchase can go through
     public void run(){
-        synchronized(this){
+        synchronized(this.i1){
+            try{
+                Thread.sleep(100);
+            } catch(InterruptedException e){
+                System.out.println("Interrupt in Order.");
+            }
             //System.out.println("\nItem ordered by customer.");
+            System.out.println("\n    Trans Num: " + this.getTransactionNumber() + " \n");
             sellItem(i1, quantityOfOrder);
         }
     }
@@ -38,14 +44,22 @@ public class Order extends Transaction{
     //Printing to the console slows this down way too much
     public void sellItem(InventoryItem i1, int quantityOfOrder){
         if(i1.getItemQuantity() >= this.quantityOfOrder){
+
             i1.setItemQuantity(i1.getItemQuantity() - this.quantityOfOrder);
-            //System.out.println("Order: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber() + "\n  New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
-            this.writeTransaction();
+            //this.writeTransaction();
+
+            //Updates Table
+            try{
+                DatabaseConnector db = new DatabaseConnector();
+                db.updateInventoryItem(i1.getItemNumber(), i1.getItemQuantity());
+            } catch(SQLException sql1){
+                sql1.printStackTrace();
+            }
 
         }else{
-            //System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");
+            System.out.println("Sorry, we are currently out of " + i1.getItemName() + ". Unable to make sale.");
         }
     }
 

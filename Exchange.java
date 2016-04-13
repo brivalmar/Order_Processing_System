@@ -45,7 +45,7 @@ public class Exchange extends Transaction{
 
             synchronized(item[1]){
 
-                this.writeTransaction();
+                //this.writeTransaction();
                 //System.out.println("Exchange: Order then Return...");
                 Order order = new Order(this.i1, this.c1, this.transactionNumber, 1);
                 order.sellItem(i1, 1);

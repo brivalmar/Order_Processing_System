@@ -1,3 +1,4 @@
+import java.sql.*;
 import java.io.*;
 
 /**
@@ -29,7 +30,12 @@ public class Return extends Transaction{
     }
 
     public void run(){
-        synchronized(this){
+        synchronized(this.i1){
+            // try{
+            //     Thread.sleep(200);
+            // } catch(InterruptedException e){
+            //     System.out.println("Interrupt in Order.");
+            // }
             //System.out.println("\nReturning Item to inventory.");
             returnItem(i1, returnQuantity);
         }
@@ -38,14 +44,21 @@ public class Return extends Transaction{
     //Printing to the console slows this down way too much
     public void returnItem(InventoryItem i1, int returnQuantity){
         if(this.returnQuantity != 0){
+
             i1.setItemQuantity(i1.getItemQuantity() + returnQuantity);
-            //System.out.println("Return: \n  Trans Number: " + this.transactionNumber + "\n  Item Number: " + i1.getItemNumber()+ "\n  New Quantity: " + (i1.getItemQuantity()));
 
             // Print transactions to a text file...
-            this.writeTransaction();
+            //this.writeTransaction();
+
+            try{
+                DatabaseConnector db = new DatabaseConnector();
+                db.updateInventoryItem(i1.getItemNumber(), i1.getItemQuantity());
+            } catch(SQLException sql1){
+                sql1.printStackTrace();
+            }
 
         } else{
-            //System.out.println("No return made.");
+            System.out.println("No return made.");
         }
     }
 

@@ -8,6 +8,7 @@
 
 public class Customer{
 
+  private int customerID;
   private String firstName;
   private String lastName;
   // private String billingAddress;
@@ -15,7 +16,8 @@ public class Customer{
   // private String paymentMethod;
   // private ArrayList<InventoryItem> itemCart;
 
-  public Customer(String firstName, String lastName){ //, String billingAddress, String shippingAddress, String paymentMethod){   //, ArrayList itemCart){
+  public Customer(int customerID, String firstName, String lastName){ //, String billingAddress, String shippingAddress, String paymentMethod){   //, ArrayList itemCart){
+    this.customerID = customerID;
     this.firstName = firstName;
     this.lastName = lastName;
     // this.billingAddress = billingAddress;
@@ -25,6 +27,9 @@ public class Customer{
   }
 
   // Getters
+  public int getCustomerID(){
+      return this.customerID;
+  }
   public String getFirstName(){
       return this.firstName;
   }
